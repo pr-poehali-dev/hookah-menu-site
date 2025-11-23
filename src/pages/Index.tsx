@@ -65,8 +65,8 @@ export default function Index() {
     };
 
     const mockPromotions: Promotion[] = [
-      { id: 1, title: 'Счастливые часы', description: 'Скидка 20% на все кальяны с 14:00 до 17:00', valid_until: '2025-12-31' },
-      { id: 2, title: 'Второй кальян в подарок', description: 'При заказе двух кальянов - третий бесплатно', valid_until: '2025-12-31' }
+      { id: 1, title: 'Бизнес-time', description: 'Скидка 30% на весь ассортимент кальянов, чая и авторских лимонадов. Действует с понедельника по субботу с 12:00 до 16:00', valid_until: '2025-12-31' },
+      { id: 2, title: 'День рождения', description: 'В день рождения (3 дня до и после) скидка 20% на весь чай, авторские лимонады и кальяны', valid_until: '2025-12-31' }
     ];
 
     setCategories(mockCategories);
@@ -117,7 +117,7 @@ export default function Index() {
 
       <section id="promotions" className="py-16 bg-card/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-8 text-center">🎉 Актуальные акции</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center">Актуальные акции</h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {promotions.map((promo) => (
               <Card key={promo.id} className="bg-card border-border hover:border-primary transition-all animate-scale-in">
