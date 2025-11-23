@@ -21,7 +21,7 @@ interface Promotion {
   id: number;
   title: string;
   description: string;
-  valid_until: string;
+  valid_until?: string;
 }
 
 export default function Index() {
@@ -65,8 +65,9 @@ export default function Index() {
     };
 
     const mockPromotions: Promotion[] = [
-      { id: 1, title: 'Бизнес-time', description: 'Скидка 30% на весь ассортимент кальянов, чая и авторских лимонадов. Действует с понедельника по субботу с 12:00 до 16:00', valid_until: '2025-12-31' },
-      { id: 2, title: 'День рождения', description: 'В день рождения (3 дня до и после) скидка 20% на весь чай, авторские лимонады и кальяны', valid_until: '2025-12-31' }
+      { id: 1, title: 'Бизнес-time', description: 'Скидка 30% на весь ассортимент кальянов, чая и авторских лимонадов. Действует с понедельника по субботу с 12:00 до 16:00' },
+      { id: 2, title: 'День рождения', description: 'В день рождения (3 дня до и после) скидка 20% на весь чай, авторские лимонады и кальяны' },
+      { id: 3, title: 'Вечер кино', description: 'Суббота и воскресенье с 20:00 — для идеального киновечера заказывайте второй кальян со скидкой и получайте чай в подарок' }
     ];
 
     setCategories(mockCategories);
@@ -118,7 +119,7 @@ export default function Index() {
       <section id="promotions" className="py-16 bg-card/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-8 text-center">Актуальные акции</h2>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {promotions.map((promo) => (
               <Card key={promo.id} className="bg-card border-border hover:border-primary transition-all animate-scale-in">
                 <CardHeader>
@@ -128,12 +129,14 @@ export default function Index() {
                   </div>
                   <CardDescription className="text-base mt-2">{promo.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                    <Icon name="Calendar" size={16} />
-                    <span>Действует до {new Date(promo.valid_until).toLocaleDateString('ru-RU')}</span>
-                  </div>
-                </CardContent>
+                {promo.valid_until && (
+                  <CardContent>
+                    <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                      <Icon name="Calendar" size={16} />
+                      <span>Действует до {new Date(promo.valid_until).toLocaleDateString('ru-RU')}</span>
+                    </div>
+                  </CardContent>
+                )}
               </Card>
             ))}
           </div>
