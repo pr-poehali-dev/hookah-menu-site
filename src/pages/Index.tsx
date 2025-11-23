@@ -102,7 +102,7 @@ export default function Index() {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/20" />
         <div className="relative z-10 text-center px-4 animate-fade-in">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 text-foreground logo-text">Hedera Lounge</h2>
+          <h2 className="md:text-7xl font-bold mb-6 text-foreground logo-text text-7xl">Hedera Lounge</h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Премиальные кальяны и атмосфера для незабываемого отдыха
           </p>
