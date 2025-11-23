@@ -84,7 +84,7 @@ export default function Index() {
                 <span className="text-2xl">💨</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-foreground">Smoke Lounge</h1>
+                <h1 className="text-2xl font-bold text-foreground logo-text">Hedera Lounge</h1>
                 <p className="text-sm text-muted-foreground">Кальянная премиум класса</p>
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function Index() {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/20" />
         <div className="relative z-10 text-center px-4 animate-fade-in">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">Smoke Lounge</h2>
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 text-foreground logo-text">Hedera Lounge</h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Премиальные кальяны и атмосфера для незабываемого отдыха
           </p>
@@ -187,7 +187,7 @@ export default function Index() {
             <CardContent className="pt-6">
               <div className="prose prose-invert max-w-none">
                 <p className="text-lg text-foreground leading-relaxed mb-4">
-                  Добро пожаловать в <strong className="text-primary">Smoke Lounge</strong> — кальянную премиум класса, 
+                  Добро пожаловать в <strong className="text-primary logo-text">Hedera Lounge</strong> — кальянную премиум класса, 
                   где каждая деталь создана для вашего комфорта и наслаждения.
                 </p>
                 <p className="text-lg text-foreground leading-relaxed mb-4">
@@ -271,7 +271,7 @@ export default function Index() {
 
       <footer className="border-t border-border py-8 mt-16">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-muted-foreground">© 2024 Smoke Lounge. Все права защищены.</p>
+          <p className="text-muted-foreground">© 2024 <span className="logo-text">Hedera Lounge</span>. Все права защищены.</p>
         </div>
       </footer>
     </div>
